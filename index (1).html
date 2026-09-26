@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="./">
+  <title>Lina Rachez Gómez | Broker Inmobiliario | TREA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Confeti exclusivo para registro -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .bg-patron-trea {
+      background-color: #0d121d;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(229, 36, 36, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(15, 23, 42, 0.9) 0px, transparent 50%),
+        radial-gradient(at 50% 50%, rgba(17, 24, 39, 0.95) 0px, transparent 60%),
+        radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 100% 100%, 24px 24px;
+    }
+    @keyframes ribbonScroll {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .cinta-trea {
+      display: flex;
+      width: 200%;
+      animation: ribbonScroll 22s linear infinite;
+    }
+    @keyframes skylinePan {
+      0% { transform: scale(1.05) translate(0%, 0%); }
+      50% { transform: scale(1.12) translate(-2%, -1%); }
+      100% { transform: scale(1.05) translate(0%, 0%); }
+    }
+    .anim-skyline {
+      animation: skylinePan 26s ease-in-out infinite;
+      will-change: transform;
+    }
+    .step-num {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 11px;
+    }
+  </style>
+</head>
+<body class="bg-patron-trea text-stone-100 min-h-screen flex flex-col justify-between selection:bg-red-500 selection:text-white">
+
+  <!-- Header Superior Translúcido -->
+  <header class="w-full border-b border-white/10 bg-[#0d121d]/85 backdrop-blur-md sticky top-0 z-40">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="flex items-center gap-1.5 bg-zinc-900 border border-red-500/40 text-stone-200 px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase shadow-xs">
+          <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+          <span>TREA • ASESORÍA PERSONALIZADA</span>
+        </div>
+      </div>
+      <a 
+        href="https://wa.me/573133238934?text=Hola%20Lina,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20tus%20servicios%20inmobiliarios" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="inline-flex items-center gap-1.5 text-xs font-bold text-white bg-red-600 hover:bg-red-700 px-4 py-1.5 rounded-full transition-all shadow-sm"
+      >
+        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+          <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.122.554 4.114 1.523 5.845l-1.616 5.903 6.077-1.594c1.668.908 3.58 1.428 5.616 1.428 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/>
+        </svg>
+        WhatsApp ↗
+      </a>
+    </div>
+  </header>
+
+  <!-- Tarjeta Central -->
+  <main class="flex-1 flex items-center justify-center p-4 sm:py-8">
+    <div class="w-full max-w-[480px] bg-white rounded-3xl overflow-hidden shadow-2xl shadow-black/40 border border-zinc-200">
+      
+      <!-- HERO CON SKYLINE TREA -->
+      <div class="relative w-full overflow-hidden pt-7 pb-6 px-6 text-center flex flex-col items-center bg-[#0d131f]">
+        <svg class="anim-skyline absolute inset-0 w-full h-full object-cover pointer-events-none opacity-45" viewBox="0 0 800 380" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="skyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#050811"/>
+              <stop offset="60%" stop-color="#0d1424"/>
+              <stop offset="100%" stop-color="#1f0909"/>
+            </linearGradient>
+            <linearGradient id="glassDark" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="rgba(30, 41, 59, 0.95)"/>
+              <stop offset="100%" stop-color="rgba(15, 23, 42, 0.98)"/>
+            </linearGradient>
+          </defs>
+          <rect width="800" height="380" fill="url(#skyGrad)" />
+          <path d="M40,380 L40,160 L110,160 L110,110 L170,110 L170,380 Z" fill="#0b1220" opacity="0.6"/>
+          <path d="M640,380 L640,100 L730,100 L730,180 L790,180 L790,380 Z" fill="#0b1220" opacity="0.6"/>
+          <rect x="130" y="60" width="150" height="320" fill="url(#glassDark)" stroke="#334155" stroke-width="0.75" />
+          <rect x="520" y="40" width="170" height="340" fill="url(#glassDark)" stroke="#334155" stroke-width="0.75" />
+        </svg>
+
+        <div class="relative z-10 flex flex-col items-center w-full">
+          
+          <!-- BLOQUE ROJO LOGO TREA -->
+          <div class="mb-4 bg-red-600 px-5 py-2 rounded-xl shadow-md flex flex-col items-center">
+            <span class="text-xl font-black text-white tracking-widest leading-none">TREA</span>
+            <span class="text-[7px] font-bold text-white/90 tracking-wider uppercase mt-0.5">THE REAL ESTATE AGENCY</span>
+          </div>
+
+          <!-- FOTO DE PERFIL CON ARO ROJO TREA -->
+          <div class="w-24 h-24 sm:w-26 sm:h-26 rounded-full p-1 bg-red-600 shadow-xl mb-3 ring-4 ring-white/10">
+            <div class="w-full h-full rounded-full overflow-hidden bg-zinc-900 flex items-center justify-center">
+              <img 
+                src="perfil.jpg" 
+                alt="Lina Rachez Gómez" 
+                class="w-full h-full object-cover object-top"
+                onerror="this.src='https://raw.githubusercontent.com/linahmgomez-lab/Negociaci-n-CierresOff-Market-Bogot-/main/perfil.jpg';"
+              />
+            </div>
+          </div>
+
+          <!-- INSIGNIA DE CARGO -->
+          <div class="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-md border border-white/20 px-3.5 py-1 rounded-full text-[10px] tracking-wider uppercase font-bold text-white shadow-xs mb-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
+            BROKER INMOBILIARIO
+          </div>
+
+          <h1 class="text-2xl font-black text-white tracking-tight mb-0.5 drop-shadow-sm">
+            Lina Rachez Gómez
+          </h1>
+          <p class="text-xs font-semibold text-red-400 tracking-wide mb-1">
+            Te ayudo a comprar, vender o arrendar tu próximo inmueble
+          </p>
+          <p class="text-[11px] text-zinc-300 max-w-sm leading-relaxed mt-1">
+            Venta y arriendo de apartamentos y casas en el norte de Bogotá y la Sabana. Si vendes, te ayudo a cerrar rápido, sin que te tome meses. Si buscas, te acompaño hasta encontrar el lugar ideal para ti.
+          </p>
+
+          <!-- CONTACTO RÁPIDO HEADER -->
+          <div class="mt-3 flex items-center gap-3 text-[10px] text-zinc-300">
+            <span>💬 WhatsApp: +57 313 3238934</span>
+            <span>•</span>
+            <span>✉️ lina@treapropiedades.com</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CINTA DE ALIADOS (crédito hipotecario + TREA) -->
+      <div class="w-full bg-gradient-to-r from-red-700 via-red-600 to-red-700 py-2 overflow-hidden border-y border-red-400/50">
+        <div class="w-full overflow-hidden flex whitespace-nowrap">
+          <div class="cinta-trea flex items-center gap-2 text-[9px] font-extrabold text-white">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5">💰 ¿Necesitas financiar tu vivienda? Tenemos alianza con estos bancos:</span>
+            <span class="inline-flex items-center gap-1 bg-white/15 border border-white/30 px-2 py-0.5 rounded-md">Bancolombia</span>
+            <span class="inline-flex items-center gap-1 bg-white/15 border border-white/30 px-2 py-0.5 rounded-md">BBVA</span>
+            <span class="inline-flex items-center gap-1 bg-white/15 border border-white/30 px-2 py-0.5 rounded-md">Banco de Bogotá</span>
+            <span class="inline-flex items-center gap-1 bg-white/15 border border-white/30 px-2 py-0.5 rounded-md">Itaú</span>
+            <span class="inline-flex items-center gap-1 bg-white/15 border border-white/30 px-2 py-0.5 rounded-md">AV Villas</span>
+            <span class="inline-flex items-center gap-1 bg-white/15 border border-white/30 px-2 py-0.5 rounded-md">Credifamilia</span>
+            <span class="inline-flex items-center gap-1 bg-white/15 border border-white/30 px-2 py-0.5 rounded-md">Bancoomeva</span>
+            <span class="inline-flex items-center gap-1 bg-white/15 border border-white/30 px-2 py-0.5 rounded-md">Caja Social</span>
+            <span class="inline-flex items-center gap-1 bg-black/30 border border-white/40 px-2 py-0.5 rounded-md">🏢 Respaldo TREA</span>
+            <!-- Duplicado para animación continua -->
+            <span class="inline-flex items-center gap-1 px-2 py-0.5">💰 ¿Necesitas financiar tu vivienda? Tenemos alianza con estos bancos:</span>
+            <span class="inline-flex items-center gap-1 bg-white/15 border border-white/30 px-2 py-0.5 rounded-md">Bancolombia</span>
+            <span class="inline-flex items-center gap-1 bg-white/15 border border-white/30 px-2 py-0.5 rounded-md">BBVA</span>
+            <span class="inline-flex items-center gap-1 bg-white/15 border border-white/30 px-2 py-0.5 rounded-md">Banco de Bogotá</span>
+            <span class="inline-flex items-center gap-1 bg-white/15 border border-white/30 px-2 py-0.5 rounded-md">Itaú</span>
+            <span class="inline-flex items-center gap-1 bg-white/15 border border-white/30 px-2 py-0.5 rounded-md">AV Villas</span>
+            <span class="inline-flex items-center gap-1 bg-white/15 border border-white/30 px-2 py-0.5 rounded-md">Credifamilia</span>
+            <span class="inline-flex items-center gap-1 bg-white/15 border border-white/30 px-2 py-0.5 rounded-md">Bancoomeva</span>
+            <span class="inline-flex items-center gap-1 bg-white/15 border border-white/30 px-2 py-0.5 rounded-md">Caja Social</span>
+            <span class="inline-flex items-center gap-1 bg-black/30 border border-white/40 px-2 py-0.5 rounded-md">🏢 Respaldo TREA</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECCIÓN DE BOTONES CON ESTILO TREA -->
+      <div class="px-6 pb-7 text-center space-y-3 bg-white text-stone-800 pt-4">
+
+        <!-- 1. COMPRADOR / INQUILINO -->
+        <button 
+          type="button" 
+          onclick="abrirModalTipoCliente()"
+          class="flex items-center justify-between w-full py-3.5 px-4 rounded-2xl border border-zinc-200 hover:border-red-400 bg-zinc-50 hover:bg-red-50/40 transition-all group text-left cursor-pointer"
+        >
+          <div>
+            <span class="text-xs font-bold text-zinc-900 group-hover:text-red-700 block">¿Buscas Comprar o Arrendar?</span>
+            <span class="text-[10px] text-zinc-600 block mt-1">Contamos con más de 5.000 inmuebles a nivel nacional. Cuéntame qué necesitas y te muestro las mejores opciones.</span>
+          </div>
+          <span class="text-zinc-400 text-sm group-hover:text-red-600 group-hover:translate-x-1 transition-all ml-2 font-bold">→</span>
+        </button>
+
+        <!-- 2. PROPIETARIO: VENDER -->
+        <button 
+          type="button" 
+          onclick="abrirModalProceso('vender')"
+          class="flex items-center justify-between w-full py-3.5 px-4 rounded-2xl border border-zinc-200 hover:border-red-400 bg-zinc-50 hover:bg-red-50/40 transition-all group text-left cursor-pointer"
+        >
+          <div>
+            <span class="text-xs font-bold text-zinc-900 group-hover:text-red-700 block">¿Tienes un inmueble para Vender?</span>
+            <span class="text-[10px] text-zinc-600 block mt-1">Conoce el proceso TREA: estudio de mercado, producción audiovisual, IA y red de compradores reales.</span>
+          </div>
+          <span class="text-zinc-400 text-sm group-hover:text-red-600 group-hover:translate-x-1 transition-all ml-2 font-bold">→</span>
+        </button>
+
+        <!-- 3. PROPIETARIO: ARRENDAR -->
+        <button 
+          type="button" 
+          onclick="abrirModalProceso('arrendar')"
+          class="flex items-center justify-between w-full py-3.5 px-4 rounded-2xl border border-zinc-200 hover:border-red-400 bg-zinc-50 hover:bg-red-50/40 transition-all group text-left cursor-pointer"
+        >
+          <div>
+            <span class="text-xs font-bold text-zinc-900 group-hover:text-red-700 block">¿Quieres poner tu inmueble en Arriendo?</span>
+            <span class="text-[10px] text-zinc-600 block mt-1">Conecta con inquilinos calificados y evita el desgaste de administrar el proceso tú mismo.</span>
+          </div>
+          <span class="text-zinc-400 text-sm group-hover:text-red-600 group-hover:translate-x-1 transition-all ml-2 font-bold">→</span>
+        </button>
+
+        <!-- 4. SOLO CRÉDITO HIPOTECARIO -->
+        <button 
+          type="button" 
+          onclick="abrirModalCredito()"
+          class="flex items-center justify-between w-full py-3.5 px-4 rounded-2xl border border-zinc-200 hover:border-red-400 bg-zinc-50 hover:bg-red-50/40 transition-all group text-left cursor-pointer"
+        >
+          <div>
+            <span class="text-xs font-bold text-zinc-900 group-hover:text-red-700 block">¿Necesitas financiar la compra de tu vivienda?</span>
+            <span class="text-[10px] text-zinc-600 block mt-1">Ya tienes el inmueble o quieres saber cuánto te prestan. Te asesoro con nuestros bancos aliados.</span>
+          </div>
+          <span class="text-zinc-400 text-sm group-hover:text-red-600 group-hover:translate-x-1 transition-all ml-2 font-bold">→</span>
+        </button>
+
+        <!-- 5. PROGRAMA REFIERE Y GANA (10% VENTA / 5% ARRIENDO) -->
+        <div class="space-y-1.5 pt-1">
+          <button 
+            type="button" 
+            onclick="abrirModalRefiere()"
+            class="w-full rounded-2xl border border-red-500/30 bg-zinc-900 hover:border-red-500 transition-all text-left group overflow-hidden shadow-xs cursor-pointer block p-0 text-white"
+          >
+            <div class="w-full overflow-hidden bg-red-600 py-1">
+              <div class="cinta-trea text-[9px] font-black uppercase tracking-widest text-white">
+                <span class="w-1/2 text-center">★ REFIERE Y GANA • 10% EN VENTA • 5% EN ARRIENDO • PAGO AL CIERRE ★</span>
+                <span class="w-1/2 text-center">★ REFIERE Y GANA • 10% EN VENTA • 5% EN ARRIENDO • PAGO AL CIERRE ★</span>
+              </div>
+            </div>          
+            <div class="p-3.5 flex items-center justify-between">
+              <div>
+                <span class="text-xs font-bold text-white group-hover:text-red-400 block">Programa «Refiere y Gana Comisión»</span>
+                <span class="text-[10px] text-zinc-300 block mt-0.5">¿Conoces a alguien que quiera comprar, vender o arrendar? Conéctalo conmigo y cobra tu porcentaje al cerrar.</span>
+              </div>
+              <span class="text-red-500 text-sm group-hover:translate-x-1 transition-transform ml-2 font-bold">→</span>
+            </div>
+          </button>
+
+          <!-- ENLACE A TÉRMINOS -->
+          <div class="text-center">
+            <button 
+              type="button" 
+              onclick="abrirModalTerminos()" 
+              class="inline-flex items-center gap-1.5 text-[10px] font-bold text-zinc-600 hover:text-red-600 hover:underline py-1 px-3 rounded-full bg-zinc-100 border border-zinc-200 cursor-pointer transition-colors"
+            >
+              <span>📋</span>
+              <span>Ver Condiciones y Tabla de Comisiones</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ENLACES INSTITUCIONALES -->
+        <div class="grid grid-cols-2 gap-2 pt-1">
+          <a 
+            href="https://linahmgomez-lab.github.io/dossiertecnico/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="py-2.5 px-3 rounded-xl border border-zinc-200 text-zinc-700 hover:text-red-600 hover:border-red-300 transition-all text-[11px] font-bold text-center bg-zinc-50 shadow-2xs block"
+          >
+            Sobre mi trayectoria ↗
+          </a>
+          <a 
+            href="https://www.linkedin.com/in/linarachez-ia/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="py-2.5 px-3 rounded-xl border border-zinc-200 text-zinc-700 hover:text-red-600 hover:border-red-300 transition-all text-[11px] font-bold text-center bg-zinc-50 shadow-2xs block"
+          >
+            LinkedIn ↗
+          </a>
+        </div>
+
+        <!-- BOTÓN CANAL DIRECTO WHATSAPP -->
+        <div class="pt-2">
+          <a 
+            href="https://wa.me/573133238934?text=Hola%20Lina,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20tus%20servicios%20inmobiliarios" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="flex items-center justify-center gap-2 w-full py-3.5 px-5 rounded-2xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-xs uppercase tracking-wide transition-all shadow-md shadow-emerald-500/20"
+          >
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.122.554 4.114 1.523 5.845l-1.616 5.903 6.077-1.594c1.668.908 3.58 1.428 5.616 1.428 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/>
+            </svg>
+            <span>Hablar con un experto</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="w-full py-4 text-center text-xs text-zinc-400 border-t border-white/10 bg-[#0d121d]/80 backdrop-blur-xs">
+    <p class="font-bold text-zinc-200">Lina Rachez Gómez • Broker Inmobiliario</p>
+    <p class="mt-0.5 text-[11px] text-zinc-400">Bogotá, Colombia • Respaldo de TREA • Red MLS</p>
+  </footer>
+
+  <!-- MODAL: PROCESO TREA (VENDER / ARRENDAR) -->
+  <div id="modal-proceso" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 hidden">
+    <div class="bg-white rounded-3xl w-full max-w-[440px] max-h-[92vh] overflow-y-auto shadow-2xl border border-zinc-200 p-5 sm:p-6 text-left relative text-zinc-800">
+      <button onclick="cerrarModalProceso()" class="absolute top-4 right-4 text-zinc-400 hover:text-zinc-800 text-lg font-bold w-8 h-8 rounded-full bg-zinc-100 flex items-center justify-center transition-colors">✕</button>
+
+      <div class="mb-4">
+        <span id="proceso-badge" class="text-[9px] font-black uppercase tracking-widest text-red-600 bg-red-50 border border-red-200 px-3 py-0.5 rounded-full">PROCESO TREA</span>
+        <h3 id="proceso-titulo" class="text-base font-extrabold text-zinc-900 mt-2">Título del proceso</h3>
+        <p id="proceso-subtitulo" class="text-xs text-zinc-500 mt-0.5 leading-relaxed">Subtítulo del proceso</p>
+      </div>
+
+      <div id="proceso-pasos" class="space-y-3 mb-5"></div>
+
+      <p id="proceso-frase" class="text-xs font-bold text-red-700 text-center mb-4"></p>
+
+      <button 
+        type="button" 
+        id="proceso-btn-registrar"
+        onclick="irARegistroDesdeProceso()"
+        class="w-full py-3.5 px-4 rounded-xl bg-zinc-900 hover:bg-black text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md cursor-pointer"
+      >
+        Pedir más información ↗
+      </button>
+    </div>
+  </div>
+
+  <!-- MODAL: DATOS PROPIETARIO (VENDER O ARRENDAR) -->
+  <div id="modal-inmueble" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 hidden">
+    <div class="bg-white rounded-3xl w-full max-w-[440px] max-h-[92vh] overflow-y-auto shadow-2xl border border-zinc-200 p-5 sm:p-6 text-left relative text-zinc-800">
+      <button onclick="cerrarModalInmueble()" class="absolute top-4 right-4 text-zinc-400 hover:text-zinc-800 text-lg font-bold w-8 h-8 rounded-full bg-zinc-100 flex items-center justify-center transition-colors">✕</button>
+
+      <div class="mb-4">
+        <span id="prop-badge" class="text-[9px] font-black uppercase tracking-widest text-red-600 bg-red-50 border border-red-200 px-3 py-0.5 rounded-full">CONSIGNACIÓN DE INMUEBLE · VENTA</span>
+        <h3 id="prop-titulo" class="text-base font-extrabold text-zinc-900 mt-2">Registra tu inmueble para venderlo</h3>
+        <p class="text-xs text-zinc-500 mt-0.5 leading-relaxed">Déjame los datos básicos de tu propiedad y te contacto con la estrategia de comercialización TREA.</p>
+      </div>
+
+      <form id="form-inmueble" onsubmit="enviarInmuebleWhatsApp(event)" class="space-y-3.5">
+        <div>
+          <label class="block text-[10px] font-extrabold uppercase tracking-wider text-zinc-600 mb-1">👤 Nombre Completo</label>
+          <input type="text" id="prop-nombre" required placeholder="Nombre y apellido" class="w-full text-xs p-2.5 rounded-xl border border-zinc-300 focus:outline-hidden focus:border-red-600 bg-white" />
+        </div>
+
+        <div>
+          <label class="block text-[10px] font-extrabold uppercase tracking-wider text-zinc-600 mb-1">📱 Celular / WhatsApp</label>
+          <input type="tel" id="prop-telefono" required placeholder="Ej: 310 1234567" class="w-full text-xs p-2.5 rounded-xl border border-zinc-300 focus:outline-hidden focus:border-red-600 bg-white" />
+        </div>
+
+        <div>
+          <label class="block text-[10px] font-extrabold uppercase tracking-wider text-zinc-600 mb-1">📍 ¿Dónde está ubicado el inmueble?</label>
+          <input type="text" id="prop-ubicacion" required placeholder="Barrio o sector (Ej: Cedritos, Colina, Suba Alta, Chía, Cajicá, Sopó...)" class="w-full text-xs p-2.5 rounded-xl border border-zinc-300 focus:outline-hidden focus:border-red-600 bg-white" />
+        </div>
+
+        <input type="hidden" id="prop-objetivo-hidden" value="Vender el inmueble" />
+
+        <button type="submit" class="w-full py-3 px-4 rounded-xl bg-zinc-900 hover:bg-black text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md cursor-pointer mt-2">
+          Enviar Datos por WhatsApp ↗
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: ELEGIR TIPO DE CLIENTE (COMPRADOR / INQUILINO) -->
+  <div id="modal-tipo-cliente" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 hidden">
+    <div class="bg-white rounded-3xl w-full max-w-[420px] shadow-2xl border border-zinc-200 p-5 sm:p-6 text-left relative text-zinc-800">
+      <button onclick="cerrarModalTipoCliente()" class="absolute top-4 right-4 text-zinc-400 hover:text-zinc-800 text-lg font-bold w-8 h-8 rounded-full bg-zinc-100 flex items-center justify-center transition-colors">✕</button>
+
+      <div class="mb-5">
+        <span class="text-[9px] font-black uppercase tracking-widest text-red-600 bg-red-50 border border-red-200 px-3 py-0.5 rounded-full">BUSCO UN INMUEBLE</span>
+        <h3 class="text-base font-extrabold text-zinc-900 mt-2">Cuéntame qué estás buscando</h3>
+        <p class="text-xs text-zinc-500 mt-0.5 leading-relaxed">Primero dime cuál es tu perfil para mostrarte las opciones correctas.</p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-3">
+        <button type="button" onclick="seleccionarTipoCliente('Comprador')" class="p-4 rounded-2xl border-2 border-zinc-200 hover:border-red-500 hover:bg-red-50/40 transition-all text-center cursor-pointer">
+          <span class="block text-2xl mb-1">🏠</span>
+          <span class="block text-xs font-extrabold text-zinc-900">Quiero Comprar</span>
+        </button>
+        <button type="button" onclick="seleccionarTipoCliente('Inquilino')" class="p-4 rounded-2xl border-2 border-zinc-200 hover:border-red-500 hover:bg-red-50/40 transition-all text-center cursor-pointer">
+          <span class="block text-2xl mb-1">🔑</span>
+          <span class="block text-xs font-extrabold text-zinc-900">Busco Arriendo</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: FILTRO DE BÚSQUEDA (COMPRADOR / INQUILINO) -->
+  <div id="modal-filtro-busqueda" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 hidden">
+    <div class="bg-white rounded-3xl w-full max-w-[440px] max-h-[92vh] overflow-y-auto shadow-2xl border border-zinc-200 p-5 sm:p-6 text-left relative text-zinc-800">
+      <button onclick="cerrarModalFiltroBusqueda()" class="absolute top-4 right-4 text-zinc-400 hover:text-zinc-800 text-lg font-bold w-8 h-8 rounded-full bg-zinc-100 flex items-center justify-center transition-colors">✕</button>
+
+      <div class="mb-4">
+        <span id="filtro-badge" class="text-[9px] font-black uppercase tracking-widest text-red-600 bg-red-50 border border-red-200 px-3 py-0.5 rounded-full">PERFIL DE BÚSQUEDA</span>
+        <h3 class="text-base font-extrabold text-zinc-900 mt-2">Cuéntame qué inmueble buscas</h3>
+        <p class="text-xs text-zinc-500 mt-0.5 leading-relaxed">Con esto te muestro opciones reales de nuestro portafolio de más de 5.000 inmuebles, sin perder tiempo.</p>
+      </div>
+
+      <form id="form-filtro-busqueda" onsubmit="enviarFiltroWhatsApp(event)" class="space-y-3.5">
+        <div>
+          <label class="block text-[10px] font-extrabold uppercase tracking-wider text-zinc-600 mb-1">👤 Nombre Completo</label>
+          <input type="text" id="filtro-nombre" required placeholder="Nombre y apellido" class="w-full text-xs p-2.5 rounded-xl border border-zinc-300 focus:outline-hidden focus:border-red-600 bg-white" />
+        </div>
+
+        <div>
+          <label class="block text-[10px] font-extrabold uppercase tracking-wider text-zinc-600 mb-1">📱 Celular / WhatsApp</label>
+          <input type="tel" id="filtro-telefono" required placeholder="Ej: 310 1234567" class="w-full text-xs p-2.5 rounded-xl border border-zinc-300 focus:outline-hidden focus:border-red-600 bg-white" />
+        </div>
+
+        <div>
+          <label class="block text-[10px] font-extrabold uppercase tracking-wider text-zinc-600 mb-1">📍 ¿Zona, ciudad o sector donde buscas?</label>
+          <input type="text" id="filtro-zona" required placeholder="Ej: Cedritos, Norte Bogotá, Colina, Suba, Chía, Cajicá, Sopó..." class="w-full text-xs p-2.5 rounded-xl border border-zinc-300 focus:outline-hidden focus:border-red-600 bg-white" />
+        </div>
+
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="block text-[10px] font-extrabold uppercase tracking-wider text-zinc-600 mb-1">🏘️ Tipo de inmueble</label>
+            <select id="filtro-tipo-inmueble" class="w-full text-xs p-2.5 rounded-xl border border-zinc-300 focus:outline-hidden bg-white">
+              <option value="Apartamento">Apartamento</option>
+              <option value="Casa">Casa</option>
+              <option value="Cualquiera">Cualquiera</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-[10px] font-extrabold uppercase tracking-wider text-zinc-600 mb-1">🚗 Parqueadero</label>
+            <select id="filtro-parqueadero" class="w-full text-xs p-2.5 rounded-xl border border-zinc-300 focus:outline-hidden bg-white">
+              <option value="Sí">Sí</option>
+              <option value="No">No</option>
+              <option value="Indiferente">Indiferente</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="block text-[10px] font-extrabold uppercase tracking-wider text-zinc-600 mb-1">🛏️ Habitaciones</label>
+            <select id="filtro-habitaciones" class="w-full text-xs p-2.5 rounded-xl border border-zinc-300 focus:outline-hidden bg-white">
+              <option value="1">1</option>
+              <option value="2" selected>2</option>
+              <option value="3">3</option>
+              <option value="4+">4 o más</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-[10px] font-extrabold uppercase tracking-wider text-zinc-600 mb-1">🛁 Baños</label>
+            <select id="filtro-banos" class="w-full text-xs p-2.5 rounded-xl border border-zinc-300 focus:outline-hidden bg-white">
+              <option value="1">1</option>
+              <option value="2" selected>2</option>
+              <option value="3">3</option>
+              <option value="4+">4 o más</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-[10px] font-extrabold uppercase tracking-wider text-zinc-600 mb-1.5">💰 Presupuesto (COP)</label>
+          <select id="filtro-presupuesto" class="w-full text-xs p-2.5 rounded-xl border border-zinc-300 focus:outline-hidden bg-white">
+            <option value="Aún no tengo un presupuesto definido">No tengo presupuesto definido</option>
+            <option value="180.000.000 a 250.000.000">$180.000.000 a $250.000.000</option>
+            <option value="251.000.000 a 500.000.000">$251.000.000 a $500.000.000</option>
+            <option value="501.000.000 a 1.000.000.000">$501.000.000 a $1.000.000.000</option>
+            <option value="Más de 1.001.000.000">Más de $1.001.000.000</option>
+          </select>
+        </div>
+
+        <div id="filtro-credito-wrapper">
+          <label class="block text-[10px] font-extrabold uppercase tracking-wider text-zinc-600 mb-1.5">¿Necesitas financiación para tu vivienda?</label>
+          <div class="grid grid-cols-2 gap-2">
+            <label class="flex items-center gap-2 p-2.5 rounded-xl border border-zinc-200 bg-zinc-50 cursor-pointer text-xs font-bold text-zinc-800">
+              <input type="radio" name="filtro_credito" value="Sí, necesita financiación" class="accent-red-600">
+              <span>Sí</span>
+            </label>
+            <label class="flex items-center gap-2 p-2.5 rounded-xl border border-zinc-200 bg-zinc-50 cursor-pointer text-xs font-bold text-zinc-800">
+              <input type="radio" name="filtro_credito" value="No, ya cuenta con recursos o crédito" checked class="accent-red-600">
+              <span>No</span>
+            </label>
+          </div>
+          <p class="text-[10px] text-zinc-500 mt-1.5">Si necesitas financiación, te asesoro sin costo con nuestros bancos aliados.</p>
+        </div>
+
+        <button type="submit" class="w-full py-3 px-4 rounded-xl bg-zinc-900 hover:bg-black text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md cursor-pointer mt-2">
+          Enviar Búsqueda por WhatsApp ↗
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: SOLO CRÉDITO HIPOTECARIO -->
+  <div id="modal-credito" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 hidden">
+    <div class="bg-white rounded-3xl w-full max-w-[440px] max-h-[92vh] overflow-y-auto shadow-2xl border border-zinc-200 p-5 sm:p-6 text-left relative text-zinc-800">
+      <button onclick="cerrarModalCredito()" class="absolute top-4 right-4 text-zinc-400 hover:text-zinc-800 text-lg font-bold w-8 h-8 rounded-full bg-zinc-100 flex items-center justify-center transition-colors">✕</button>
+
+      <div class="mb-4">
+        <span class="text-[9px] font-black uppercase tracking-widest text-red-600 bg-red-50 border border-red-200 px-3 py-0.5 rounded-full">ASESORÍA DE CRÉDITO</span>
+        <h3 class="text-base font-extrabold text-zinc-900 mt-2">Asesoría de Crédito Hipotecario</h3>
+        <p class="text-xs text-zinc-500 mt-0.5 leading-relaxed">Te oriento en el proceso de financiación a través de nuestros bancos aliados, tengas o no un inmueble seleccionado.</p>
+      </div>
+
+      <form id="form-credito" onsubmit="enviarCreditoWhatsApp(event)" class="space-y-3.5">
+        <div>
+          <label class="block text-[10px] font-extrabold uppercase tracking-wider text-zinc-600 mb-1">👤 Nombre Completo</label>
+          <input type="text" id="credito-nombre" required placeholder="Nombre y apellido" class="w-full text-xs p-2.5 rounded-xl border border-zinc-300 focus:outline-hidden focus:border-red-600 bg-white" />
+        </div>
+
+        <div>
+          <label class="block text-[10px] font-extrabold uppercase tracking-wider text-zinc-600 mb-1">📱 Celular / WhatsApp</label>
+          <input type="tel" id="credito-telefono" required placeholder="Ej: 310 1234567" class="w-full text-xs p-2.5 rounded-xl border border-zinc-300 focus:outline-hidden focus:border-red-600 bg-white" />
+        </div>
+
+        <div>
+          <label class="block text-[10px] font-extrabold uppercase tracking-wider text-zinc-600 mb-1.5">🏠 ¿Ya tienes el inmueble seleccionado?</label>
+          <div class="grid grid-cols-2 gap-2">
+            <label class="flex items-center gap-2 p-2.5 rounded-xl border border-zinc-200 bg-zinc-50 cursor-pointer text-xs font-bold text-zinc-800">
+              <input type="radio" name="credito_inmueble" value="Sí, ya tiene el inmueble" checked class="accent-red-600">
+              <span>Sí</span>
+            </label>
+            <label class="flex items-center gap-2 p-2.5 rounded-xl border border-zinc-200 bg-zinc-50 cursor-pointer text-xs font-bold text-zinc-800">
+              <input type="radio" name="credito_inmueble" value="No, aún no lo tiene" class="accent-red-600">
+              <span>No</span>
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-[10px] font-extrabold uppercase tracking-wider text-zinc-600 mb-1">💰 Monto aproximado que necesitas financiar</label>
+          <input type="text" id="credito-monto" required placeholder="Ej: 350.000.000 COP" class="w-full text-xs p-2.5 rounded-xl border border-zinc-300 focus:outline-hidden focus:border-red-600 bg-white" />
+        </div>
+
+        <div>
+          <label class="block text-[10px] font-extrabold uppercase tracking-wider text-zinc-600 mb-1">📝 Comentario (opcional)</label>
+          <input type="text" id="credito-comentario" placeholder="Ej: soy independiente, primera vivienda, etc." class="w-full text-xs p-2.5 rounded-xl border border-zinc-300 focus:outline-hidden focus:border-red-600 bg-white" />
+        </div>
+
+        <button type="submit" class="w-full py-3 px-4 rounded-xl bg-zinc-900 hover:bg-black text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md cursor-pointer mt-2">
+          Enviar Solicitud por WhatsApp ↗
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: REFIERE Y GANA (10% VENTA / 5% ARRIENDO) -->
+  <div id="modal-refiere" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 hidden">
+    <div class="bg-white rounded-3xl w-full max-w-[440px] max-h-[92vh] overflow-y-auto shadow-2xl border border-zinc-200 p-5 sm:p-6 text-left relative text-zinc-800">
+      <button onclick="cerrarModalRefiere()" class="absolute top-4 right-4 text-zinc-400 hover:text-zinc-800 text-lg font-bold w-8 h-8 rounded-full bg-zinc-100 flex items-center justify-center transition-colors">✕</button>
+
+      <div id="vista-formulario">
+        <div class="flex items-center justify-between text-center mb-5 px-1">
+          <div class="flex flex-col items-center">
+            <span class="w-6 h-6 rounded-full bg-red-600 text-white text-[11px] font-bold flex items-center justify-center">1</span>
+            <span class="text-[9px] text-zinc-700 mt-1 font-semibold">Pasa el dato</span>
+          </div>
+          <div class="h-0.5 flex-1 bg-zinc-200 mx-2"></div>
+          <div class="flex flex-col items-center">
+            <span class="w-6 h-6 rounded-full bg-zinc-200 text-zinc-600 text-[11px] font-bold flex items-center justify-center">2</span>
+            <span class="text-[9px] text-zinc-500 mt-1">Cierre TREA</span>
+          </div>
+          <div class="h-0.5 flex-1 bg-zinc-200 mx-2"></div>
+          <div class="flex flex-col items-center">
+            <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 text-[11px] font-bold flex items-center justify-center">3</span>
+            <span class="text-[9px] text-emerald-700 mt-1 font-bold">¡Cobras!</span>
+          </div>
+        </div>
+
+        <form id="form-refiere" onsubmit="generarPase(event)" class="space-y-4">
+          <div class="bg-zinc-50 p-3.5 rounded-2xl border border-zinc-200">
+            <label class="block text-[10px] font-extrabold uppercase tracking-wider text-zinc-700 mb-1.5">📍 ¿A dónde transferimos tu comisión al cerrar el negocio?</label>
+            <input type="text" id="aliado-nombre" required placeholder="Tu Nombre y Apellido completo" class="w-full text-xs p-2.5 rounded-xl border border-zinc-300 focus:outline-hidden focus:border-red-600 bg-white mb-2" />
+            <div class="grid grid-cols-5 gap-2">
+              <select id="aliado-banco" onchange="actualizarPlaceholderPago()" class="col-span-2 text-xs p-2.5 rounded-xl border border-zinc-300 focus:outline-hidden bg-white">
+                <option value="Nequi">Nequi</option>
+                <option value="Daviplata">Daviplata</option>
+                <option value="Bancolombia">Bancolombia</option>
+                <option value="Llave">Llave</option>
+              </select>
+              <input type="text" id="aliado-cuenta" required placeholder="Número de celular" class="col-span-3 text-xs p-2.5 rounded-xl border border-zinc-300 focus:outline-hidden focus:border-red-600 bg-white" oninput="filtrarInputPago(this)" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-[10px] font-extrabold uppercase tracking-wider text-zinc-600 mb-2">👤 Datos de la persona que refieres</label>
+            <div class="space-y-2.5">
+              <input type="text" id="ref-nombre" required placeholder="Nombre completo de tu referido" class="w-full text-xs p-2.5 rounded-xl border border-zinc-300 focus:outline-hidden focus:border-red-600 bg-white" />
+
+              <div class="grid grid-cols-5 gap-2">
+                <select id="ref-pais" class="col-span-2 text-xs p-2.5 rounded-xl border border-zinc-300 focus:outline-hidden bg-white">
+                  <option value="Colombia 🇨🇴 (+57)">🇨🇴 Colombia (+57)</option>
+                  <option value="EE. UU. 🇺🇸 (+1)">🇺🇸 EE. UU. (+1)</option>
+                  <option value="España 🇪🇸 (+34)">🇪🇸 España (+34)</option>
+                </select>
+                <input type="tel" id="ref-telefono" required inputmode="numeric" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '')" placeholder="WhatsApp (solo números)" class="col-span-3 text-xs p-2.5 rounded-xl border border-zinc-300 focus:outline-hidden focus:border-red-600 bg-white" />
+              </div>
+
+              <input type="email" id="ref-correo" placeholder="Correo electrónico (opcional)" class="w-full text-xs p-2.5 rounded-xl border border-zinc-300 focus:outline-hidden focus:border-red-600 bg-white" />
+
+              <div>
+                <label class="block text-[9px] font-bold text-zinc-500 uppercase mb-1">¿Qué necesita tu referido?</label>
+                <select id="ref-servicio" class="w-full text-xs p-2.5 rounded-xl border border-zinc-300 focus:outline-hidden bg-white">
+                  <option value="Venta de inmueble (Propietario) - Comisión 10%">Propietario que quiere vender (Tu comisión: 10%)</option>
+                  <option value="Comprador de vivienda - Comisión 10%">Cliente que busca comprar (Tu comisión: 10%)</option>
+                  <option value="Arriendo de inmueble (Propietario) - Comisión 5%">Propietario que quiere arrendar (Tu comisión: 5%)</option>
+                  <option value="Arrendatario / Busca arriendo - Comisión 5%">Cliente que busca tomar en arriendo (Tu comisión: 5%)</option>
+                  <option value="Únicamente crédito para financiar su vivienda - Comisión a convenir">Únicamente necesita crédito para financiar su vivienda (comisión a convenir)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3 rounded-2xl border border-red-300 bg-red-50/60 flex items-start gap-2.5">
+            <input type="checkbox" id="check-refiere-form" required class="w-5 h-5 mt-0.5 accent-red-600 rounded cursor-pointer shrink-0">
+            <label for="check-refiere-form" class="text-xs text-zinc-900 font-bold leading-snug cursor-pointer select-none">
+              ✓ Acepto los términos y condiciones comerciales para el cobro y pago de mi comisión.
+            </label>
+          </div>
+
+          <button type="submit" class="w-full py-3.5 px-4 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md cursor-pointer">
+            Registrar Referido y Enviar ↗
+          </button>
+        </form>
+      </div>
+
+      <div id="vista-pase" class="hidden text-center">
+        <div class="w-12 h-12 mx-auto rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl font-bold mb-2">✓</div>
+        <span class="text-[9px] font-black uppercase tracking-widest text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-0.5 rounded-full">¡REFERIDO REGISTRADO CON ÉXITO!</span>
+        <h3 class="text-base font-extrabold text-zinc-900 mt-2">Comprobante de Registro</h3>
+
+        <div class="mt-4 p-4 rounded-2xl border border-zinc-200 bg-zinc-50 text-left space-y-2 text-xs">
+          <div class="flex justify-between items-center border-b border-zinc-200 pb-1.5">
+            <span class="text-[10px] text-zinc-500 font-bold uppercase">N.º DE REGISTRO:</span>
+            <span id="pase-codigo" class="font-mono font-extrabold text-zinc-900 text-xs bg-white border border-zinc-200 px-2 py-0.5 rounded"></span>
+          </div>
+          <div>
+            <span class="text-[9px] text-zinc-400 font-bold block uppercase">PERSONA QUE REFIERES:</span>
+            <span id="pase-cliente" class="font-bold text-zinc-800 block text-xs"></span>
+          </div>
+          <div>
+            <span class="text-[9px] text-zinc-400 font-bold block uppercase">CORREO REGISTRADO:</span>
+            <span id="pase-correo" class="font-medium text-zinc-700 block text-xs"></span>
+          </div>
+          <div>
+            <span class="text-[9px] text-zinc-400 font-bold block uppercase">PAGO DE COMISIÓN A:</span>
+            <span id="pase-aliado" class="font-bold text-zinc-800 block text-xs"></span>
+          </div>
+          <div>
+            <span class="text-[9px] text-zinc-400 font-bold block uppercase">INTERÉS / PROGRAMA:</span>
+            <span id="pase-interes" class="font-medium text-zinc-700 block text-xs"></span>
+          </div>
+        </div>
+
+        <div id="pase-racha-box" class="mt-3 p-2.5 rounded-xl border border-red-200 bg-red-50 text-center text-xs">
+          <span id="pase-racha-badge" class="font-extrabold text-red-900 block text-[11px]"></span>
+        </div>
+
+        <div class="bg-zinc-100 p-2.5 rounded-xl border border-zinc-200 text-[10px] text-zinc-700 mt-3 text-left flex items-start gap-2">
+          <span>📷</span>
+          <span>Guarda una captura de este comprobante para cuando cerremos el negocio con TREA y te hagamos la transferencia.</span>
+        </div>
+
+        <a id="pase-btn-whatsapp" href="#" target="_blank" class="mt-4 flex items-center justify-center gap-2 w-full py-3.5 px-4 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md">
+          <span>Avisarle a Lina por WhatsApp ↗</span>
+        </a>
+        <button type="button" onclick="cerrarModalRefiere()" class="mt-2 text-[11px] text-zinc-500 hover:text-zinc-800 underline block w-full py-1 cursor-pointer">Cerrar ventana</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: TÉRMINOS Y CONDICIONES (TABLA DE COMISIONES AJUSTADA) -->
+  <div id="modal-terminos" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 hidden">
+    <div class="bg-white rounded-3xl w-full max-w-[460px] max-h-[85vh] overflow-y-auto shadow-2xl border border-zinc-200 p-5 sm:p-6 text-left relative space-y-4 text-zinc-800">
+      <button onclick="cerrarModalTerminos()" class="absolute top-4 right-4 text-zinc-400 hover:text-zinc-800 text-lg font-bold w-8 h-8 rounded-full bg-zinc-100 flex items-center justify-center transition-colors">✕</button>
+
+      <div>
+        <span class="text-[9px] font-black uppercase tracking-widest text-zinc-700 bg-zinc-100 border border-zinc-200 px-3 py-0.5 rounded-full">POLÍTICA DE PAGO TRANSPARENTE</span>
+        <h3 class="text-base font-extrabold text-zinc-900 mt-2">Condiciones y Tabla de Comisiones</h3>
+        <p class="text-xs text-zinc-500 mt-0.5 leading-relaxed">Las comisiones se liquidan sobre el honorario neto efectivamente cobrado por corretaje inmobiliario:</p>
+      </div>
+
+      <div class="space-y-2.5 text-xs text-zinc-700">
+        <div class="p-3 rounded-xl bg-zinc-50 border border-zinc-200">
+          <h4 class="font-bold text-zinc-900 text-[11px] uppercase">1. Negocios de Compra / Venta (10%)</h4>
+          <p class="text-[11px] text-zinc-600 mt-0.5 leading-relaxed">
+            • Aplica tanto si refieres al <strong>propietario que vende</strong> como al <strong>cliente que compra</strong>.<br>
+            • <strong>Comisión:</strong> <strong>10%</strong> de la comisión neta efectivamente cobrada por Lina tras la firma de escrituras en notaría y pago de honorarios.
+          </p>
+        </div>
+
+        <div class="p-3 rounded-xl bg-zinc-50 border border-zinc-200">
+          <h4 class="font-bold text-zinc-900 text-[11px] uppercase">2. Negocios de Arrendamiento (5%)</h4>
+          <p class="text-[11px] text-zinc-600 mt-0.5 leading-relaxed">
+            • Aplica tanto si refieres al <strong>propietario que pone en arriendo</strong> como al <strong>arrendatario que toma el inmueble</strong>.<br>
+            • <strong>Comisión:</strong> <strong>5%</strong> de la comisión neta cobrada una vez formalizado el contrato y recibido el honorario pactado.
+          </p>
+        </div>
+      </div>
+
+      <div class="p-2.5 rounded-xl bg-red-50 border border-red-200 text-[10px] text-red-950 leading-relaxed">
+        <strong>Transparencia:</strong> El cliente o propietario referido no debe tener una negociación previa o en curso con Lina o TREA. La transferencia se realiza a la cuenta inscrita en el registro.
+      </div>
+
+      <div class="pt-2 border-t border-zinc-200 space-y-3">
+        <label class="flex items-start gap-2.5 p-3 rounded-2xl bg-zinc-100 border border-zinc-300 cursor-pointer">
+          <input type="checkbox" id="check-terminos-ventana" class="w-5 h-5 mt-0.5 accent-red-600 rounded cursor-pointer shrink-0" />
+          <span class="text-xs text-zinc-900 font-bold leading-snug select-none">
+            He leído y acepto la tabla de comisiones y condiciones comerciales del programa.
+          </span>
+        </label>
+
+        <button type="button" onclick="confirmarModalTerminos()" class="w-full py-3 rounded-xl bg-zinc-900 hover:bg-black text-white font-bold text-xs uppercase tracking-wider transition-all cursor-pointer shadow-sm">
+          Confirmar y Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        cerrarModalProceso();
+        cerrarModalInmueble();
+        cerrarModalTipoCliente();
+        cerrarModalFiltroBusqueda();
+        cerrarModalCredito();
+        cerrarModalRefiere();
+        cerrarModalTerminos();
+      }
+    });
+
+    // ============================================================
+    // PROCESO TREA (VENDER / ARRENDAR) — INFORMATIVO
+    // ============================================================
+    const PROCESOS = {
+      vender: {
+        badge: 'PROCESO TREA · VENTA',
+        titulo: '¿Quieres Vender tu inmueble?',
+        subtitulo: 'Así es como TREA convierte tu propiedad en una venta real:',
+        pasos: [
+          'Registramos tu inmueble en nuestra <strong class="text-red-700">plataforma</strong>.',
+          'Tomamos <strong class="text-red-700">fotos y videos profesionales</strong> de tu inmueble.',
+          'Tu propiedad ingresa a nuestro ecosistema: <strong class="text-red-700">consultores expertos, publicidad top y redes sociales masivas</strong>.',
+          'Nuestra inteligencia artificial lo promueve con quienes realmente importan: <strong class="text-red-700">compradores reales</strong>.',
+          'Creamos un <strong class="text-red-700">estudio de mercado</strong> para que conozcas el valor real de tu inmueble y ejecutamos una gran estrategia de publicidad, donde <strong class="text-red-700">cientos de clientes</strong> podrán verlo cada mes.'
+        ],
+        frase: 'Vendemos con estrategia, no con suerte.',
+        objetivo: 'vender'
+      },
+      arrendar: {
+        badge: 'PROCESO TREA · ARRIENDO',
+        titulo: '¿Quieres poner tu inmueble en Arriendo?',
+        subtitulo: 'Así es como TREA te consigue un inquilino calificado:',
+        pasos: [
+          'Registramos tu inmueble en nuestra <strong class="text-red-700">plataforma</strong>.',
+          'Tomamos <strong class="text-red-700">fotos y videos profesionales</strong> de tu inmueble.',
+          'Tu propiedad ingresa a nuestro ecosistema: <strong class="text-red-700">consultores expertos, publicidad top y redes sociales masivas</strong>.',
+          'Nuestra inteligencia artificial lo promueve con quienes realmente importan: <strong class="text-red-700">arrendatarios calificados y verificados</strong>.',
+          'Hacemos el <strong class="text-red-700">estudio del canon adecuado</strong> para tu zona y filtramos a los interesados para que <strong class="text-red-700">solo veas propuestas serias</strong>.'
+        ],
+        frase: 'Arrendamos con estrategia, sin dolores de cabeza.',
+        objetivo: 'arrendar'
+      }
+    };
+
+    let procesoActual = 'vender';
+
+    function abrirModalProceso(tipo) {
+      const data = PROCESOS[tipo];
+      procesoActual = tipo;
+
+      document.getElementById('proceso-badge').innerText = data.badge;
+      document.getElementById('proceso-titulo').innerText = data.titulo;
+      document.getElementById('proceso-subtitulo').innerText = data.subtitulo;
+      document.getElementById('proceso-frase').innerText = data.frase;
+
+      const cont = document.getElementById('proceso-pasos');
+      cont.innerHTML = '';
+      data.pasos.forEach((paso, i) => {
+        const fila = document.createElement('div');
+        fila.className = 'flex items-start gap-2.5';
+        fila.innerHTML = `
+          <span class="step-num bg-red-600 text-white">${i + 1}</span>
+          <p class="text-xs text-zinc-700 leading-relaxed pt-0.5">${paso}</p>
+        `;
+        cont.appendChild(fila);
+      });
+
+      document.getElementById('modal-proceso').classList.remove('hidden');
+    }
+
+    function cerrarModalProceso() {
+      document.getElementById('modal-proceso').classList.add('hidden');
+    }
+
+    function irARegistroDesdeProceso() {
+      cerrarModalProceso();
+      abrirModalInmueble(procesoActual);
+    }
+
+    // ============================================================
+    // MODAL DE PROPIETARIOS (VENDER O ARRENDAR)
+    // ============================================================
+    function abrirModalInmueble(preseleccion) {
+      const esArrendar = preseleccion === 'arrendar';
+      document.getElementById('prop-objetivo-hidden').value = esArrendar ? 'Poner en arriendo' : 'Vender el inmueble';
+      document.getElementById('prop-badge').innerText = esArrendar ? 'CONSIGNACIÓN DE INMUEBLE · ARRIENDO' : 'CONSIGNACIÓN DE INMUEBLE · VENTA';
+      document.getElementById('prop-titulo').innerText = esArrendar ? 'Registra tu inmueble para arrendarlo' : 'Registra tu inmueble para venderlo';
+      document.getElementById('modal-inmueble').classList.remove('hidden');
+    }
+    function cerrarModalInmueble() {
+      document.getElementById('modal-inmueble').classList.add('hidden');
+    }
+
+    function enviarInmuebleWhatsApp(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('prop-nombre').value.trim();
+      const telefono = document.getElementById('prop-telefono').value.trim();
+      const ubicacion = document.getElementById('prop-ubicacion').value.trim();
+      const objetivo = document.getElementById('prop-objetivo-hidden').value;
+
+      const textoWA = 
+        `*NUEVA CONSIGNACIÓN DE INMUEBLE (TREA)*%0A` +
+        `--------------------------------%0A` +
+        `• *Propietario:* ${encodeURIComponent(nombre)}%0A` +
+        `• *Contacto:* ${encodeURIComponent(telefono)}%0A` +
+        `• *Ubicación del inmueble:* ${encodeURIComponent(ubicacion)}%0A` +
+        `• *Objetivo:* ${encodeURIComponent(objetivo)}%0A` +
+        `--------------------------------%0A` +
+        `Hola Lina, completé los datos de mi propiedad en tu tarjeta digital y deseo coordinar la comercialización con TREA.`;
+
+      window.open(`https://wa.me/573133238934?text=${textoWA}`, '_blank');
+      document.getElementById('form-inmueble').reset();
+      cerrarModalInmueble();
+    }
+
+    // ============================================================
+    // TIPO DE CLIENTE (COMPRADOR / INQUILINO) + FILTRO DE BÚSQUEDA
+    // ============================================================
+    let tipoClienteActual = 'Comprador';
+
+    function abrirModalTipoCliente() {
+      document.getElementById('modal-tipo-cliente').classList.remove('hidden');
+    }
+    function cerrarModalTipoCliente() {
+      document.getElementById('modal-tipo-cliente').classList.add('hidden');
+    }
+
+    function seleccionarTipoCliente(tipo) {
+      tipoClienteActual = tipo;
+      cerrarModalTipoCliente();
+
+      const badge = document.getElementById('filtro-badge');
+      badge.innerText = tipo === 'Comprador' ? 'PERFIL: COMPRADOR' : 'PERFIL: INQUILINO';
+
+      // El crédito hipotecario solo aplica para compra, no para arriendo
+      document.getElementById('filtro-credito-wrapper').classList.toggle('hidden', tipo === 'Inquilino');
+
+      document.getElementById('modal-filtro-busqueda').classList.remove('hidden');
+    }
+
+    function cerrarModalFiltroBusqueda() {
+      document.getElementById('modal-filtro-busqueda').classList.add('hidden');
+    }
+
+    function enviarFiltroWhatsApp(e) {
+      e.preventDefault();
+
+      const nombre = document.getElementById('filtro-nombre').value.trim();
+      const telefono = document.getElementById('filtro-telefono').value.trim();
+      const zona = document.getElementById('filtro-zona').value.trim();
+      const tipoInmueble = document.getElementById('filtro-tipo-inmueble').value;
+      const parqueadero = document.getElementById('filtro-parqueadero').value;
+      const habitaciones = document.getElementById('filtro-habitaciones').value;
+      const banos = document.getElementById('filtro-banos').value;
+      const presupuesto = document.getElementById('filtro-presupuesto').value;
+      const esComprador = tipoClienteActual === 'Comprador';
+      const lineaCredito = esComprador
+        ? `• *Financiación:* ${encodeURIComponent(document.querySelector('input[name="filtro_credito"]:checked').value)}%0A`
+        : '';
+
+      const textoWA =
+        `*NUEVA BÚSQUEDA DE INMUEBLE (TREA)*%0A` +
+        `*Perfil:* ${encodeURIComponent(tipoClienteActual)}%0A` +
+        `--------------------------------%0A` +
+        `• *Nombre:* ${encodeURIComponent(nombre)}%0A` +
+        `• *Contacto:* ${encodeURIComponent(telefono)}%0A` +
+        `• *Zona/ciudad/sector:* ${encodeURIComponent(zona)}%0A` +
+        `• *Tipo de inmueble:* ${encodeURIComponent(tipoInmueble)}%0A` +
+        `• *Habitaciones:* ${encodeURIComponent(habitaciones)}%0A` +
+        `• *Baños:* ${encodeURIComponent(banos)}%0A` +
+        `• *Parqueadero:* ${encodeURIComponent(parqueadero)}%0A` +
+        `• *Presupuesto:* ${encodeURIComponent(presupuesto + ' COP')}%0A` +
+        lineaCredito +
+        `--------------------------------%0A` +
+        `Hola Lina, completé el filtro de búsqueda en tu tarjeta digital de TREA y quiero que me ayudes a encontrar opciones.`;
+
+      window.open(`https://wa.me/573133238934?text=${textoWA}`, '_blank');
+      document.getElementById('form-filtro-busqueda').reset();
+      cerrarModalFiltroBusqueda();
+    }
+
+    // ============================================================
+    // SOLO CRÉDITO HIPOTECARIO
+    // ============================================================
+    function abrirModalCredito() {
+      document.getElementById('modal-credito').classList.remove('hidden');
+    }
+    function cerrarModalCredito() {
+      document.getElementById('modal-credito').classList.add('hidden');
+    }
+
+    function enviarCreditoWhatsApp(e) {
+      e.preventDefault();
+
+      const nombre = document.getElementById('credito-nombre').value.trim();
+      const telefono = document.getElementById('credito-telefono').value.trim();
+      const tieneInmueble = document.querySelector('input[name="credito_inmueble"]:checked').value;
+      const monto = document.getElementById('credito-monto').value.trim();
+      const comentario = document.getElementById('credito-comentario').value.trim() || 'Sin comentarios adicionales';
+
+      const textoWA =
+        `*NUEVA SOLICITUD DE CRÉDITO HIPOTECARIO (TREA)*%0A` +
+        `--------------------------------%0A` +
+        `• *Nombre:* ${encodeURIComponent(nombre)}%0A` +
+        `• *Contacto:* ${encodeURIComponent(telefono)}%0A` +
+        `• *¿Ya tiene el inmueble?:* ${encodeURIComponent(tieneInmueble)}%0A` +
+        `• *Monto aproximado a financiar:* ${encodeURIComponent(monto)}%0A` +
+        `• *Comentario:* ${encodeURIComponent(comentario)}%0A` +
+        `--------------------------------%0A` +
+        `Hola Lina, quiero asesoría de crédito hipotecario para mi vivienda.`;
+
+      window.open(`https://wa.me/573133238934?text=${textoWA}`, '_blank');
+      document.getElementById('form-credito').reset();
+      cerrarModalCredito();
+    }
+
+    // ============================================================
+    // MODAL REFIERE Y GANA
+    // ============================================================
+    function abrirModalRefiere() {
+      const checkForm = document.getElementById('check-refiere-form');
+      if (checkForm) checkForm.checked = false;
+      document.getElementById('vista-formulario').classList.remove('hidden');
+      document.getElementById('vista-pase').classList.add('hidden');
+      document.getElementById('modal-refiere').classList.remove('hidden');
+    }
+
+    function cerrarModalRefiere() {
+      document.getElementById('modal-refiere').classList.add('hidden');
+    }
+
+    function abrirModalTerminos() {
+      const checkVentana = document.getElementById('check-terminos-ventana');
+      if (checkVentana) checkVentana.checked = false;
+      document.getElementById('modal-terminos').classList.remove('hidden');
+    }
+
+    function confirmarModalTerminos() {
+      const check = document.getElementById('check-terminos-ventana');
+      if (!check.checked) {
+        alert("Por favor marca la casilla de verificación confirmando que has leído y aceptas las condiciones comerciales.");
+        return;
+      }
+      document.getElementById('modal-terminos').classList.add('hidden');
+    }
+
+    function cerrarModalTerminos() {
+      document.getElementById('modal-terminos').classList.add('hidden');
+    }
+
+    function actualizarPlaceholderPago() {
+      const banco = document.getElementById('aliado-banco').value;
+      const input = document.getElementById('aliado-cuenta');
+      input.value = '';
+
+      if (banco === 'Nequi' || banco === 'Daviplata') {
+        input.placeholder = 'Número de celular';
+      } else if (banco === 'Bancolombia') {
+        input.placeholder = 'Número de cuenta';
+      } else if (banco === 'Llave') {
+        input.placeholder = 'Escribe aquí tu llave';
+      }
+    }
+
+    function filtrarInputPago(input) {
+      const banco = document.getElementById('aliado-banco').value;
+      if (banco !== 'Llave') {
+        input.value = input.value.replace(/[^0-9]/g, '');
+      }
+    }
+
+    function generarPase(e) {
+      e.preventDefault();
+
+      const checkForm = document.getElementById('check-refiere-form');
+      if (!checkForm.checked) {
+        alert("Debes aceptar los términos y condiciones comerciales para registrar tu referido y recibir tu comisión.");
+        return;
+      }
+
+      const aliadoNombre = document.getElementById('aliado-nombre').value.trim();
+      const aliadoBanco = document.getElementById('aliado-banco').value;
+      const aliadoCuenta = document.getElementById('aliado-cuenta').value.trim();
+
+      const refNombre = document.getElementById('ref-nombre').value.trim();
+      const refPais = document.getElementById('ref-pais').value;
+      const refTelefono = document.getElementById('ref-telefono').value.trim();
+      const refCorreo = document.getElementById('ref-correo').value.trim() || 'No registrado';
+      const refServicio = document.getElementById('ref-servicio').value;
+
+      let rachaActual = parseInt(localStorage.getItem('racha_referidos') || '0', 10) + 1;
+      localStorage.setItem('racha_referidos', rachaActual);
+
+      let textoBadge = '';
+      if (rachaActual === 1) {
+        textoBadge = '🔥 ¡Primer referido registrado con éxito!';
+      } else if (rachaActual === 2) {
+        textoBadge = '🔥 ¡Nivel Aliado Pro! Llevas 2 referidos en racha';
+      } else if (rachaActual <= 5) {
+        textoBadge = `⭐ ¡Super Aliado VIP! Llevas ${rachaActual} referidos acumulados`;
+      } else {
+        textoBadge = `🏆 ¡Aliado Élite! Llevas ${rachaActual} referidos acumulados`;
+      }
+      document.getElementById('pase-racha-badge').innerText = textoBadge;
+
+      const randomId = Math.floor(1000 + Math.random() * 9000);
+      const codigoPase = `TREA-REF-${randomId}-2026`;
+
+      document.getElementById('pase-codigo').innerText = codigoPase;
+      document.getElementById('pase-cliente').innerText = `${refNombre} (${refPais})`;
+      document.getElementById('pase-correo').innerText = refCorreo;
+      document.getElementById('pase-aliado').innerText = `${aliadoNombre} (${aliadoBanco}: ${aliadoCuenta})`;
+      document.getElementById('pase-interes').innerText = refServicio;
+
+      const mensajeWA = `*NUEVO REFERIDO - RED TREA*%0A` +
+        `*N.º Registro:* ${codigoPase}%0A` +
+        `*Racha del Aliado:* ${textoBadge}%0A` +
+        `--------------------------------%0A` +
+        `*QUIEN REFIERE (Para pago de comisión):*%0A` +
+        `• Nombre: ${aliadoNombre}%0A` +
+        `• Pago a: ${aliadoBanco} - ${aliadoCuenta}%0A` +
+        `--------------------------------%0A` +
+        `*DATOS DEL REFERIDO:*%0A` +
+        `• Nombre: ${refNombre}%0A` +
+        `• Ubicación / Teléfono: ${refPais} - ${refTelefono}%0A` +
+        `• Correo: ${refCorreo}%0A` +
+        `• Objetivo del cliente: ${refServicio}%0A` +
+        `--------------------------------%0A` +
+        `_¡Registro verificado desde la tarjeta digital TREA de Lina Rachez!_`;
+
+      document.getElementById('pase-btn-whatsapp').href = `https://wa.me/573133238934?text=${mensajeWA}`;
+
+      document.getElementById('vista-formulario').classList.add('hidden');
+      document.getElementById('vista-pase').classList.remove('hidden');
+
+      document.getElementById('form-refiere').reset();
+
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 90,
+          spread: 75,
+          origin: { y: 0.6 }
+        });
+      }
+    }
+  </script>
+</body>
+</html>
